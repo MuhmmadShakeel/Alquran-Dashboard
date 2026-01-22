@@ -6,12 +6,15 @@ import UserPage from './Components/DashboardPages/UserPage'
 import Teacherpage from './Components/DashboardPages/Teacherpage'
 import FeePage from './Components/DashboardPages/FeePage'
 import DashboardHeadePage from './Components/DashboardPages/DashboardHeadePage'
+import Navbar from './Components/Common/Navbar'
 function App() {
   return (
     <>
       <div>
+        <Navbar/>
       <Sidebar />
           <Routes>
+            <Route path="/" element={<DashboardHeadePage/>} />
             <Route path="/students" element={<StudentPage/>} />
             <Route path="/users" element={<UserPage/>} />
             <Route path="/teachers" element={<Teacherpage/>} />
