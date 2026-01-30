@@ -27,7 +27,7 @@ const activityData = [
 
 function DashboardHead() {
   return (
-    <div className="min-h-screen w-full bg-slate-50 px-4 sm:px-6 lg:px-10 py-6">
+    <div className=" lg:ml-64 min-h-screen w-full bg-slate-50 px-4 sm:px-6 lg:px-10 py-6">
       
       {/* MAIN CONTAINER */}
       <div className="max-w-[1400px] mx-auto">

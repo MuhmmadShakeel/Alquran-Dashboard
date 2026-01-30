@@ -3,7 +3,7 @@ import DashboardHead from '../Dashboard/DashboardHead/DashboardHead'
 
 function DashboardHeadePage() {
   return (
-    <div>
+    <div className='overflow-hidden'>
       <DashboardHead />
     </div>
   )
