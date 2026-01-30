@@ -27,50 +27,51 @@ const activityData = [
 
 function DashboardHead() {
   return (
-    <div className="min-h-screen px-4 sm:px-6 py-6 bg-transparent">
+    <div className="min-h-screen w-full bg-slate-50 px-4 sm:px-6 lg:px-10 py-6">
       
-      {/* Container */}
-      <div className="max-w-7xl mx-auto">
+      {/* MAIN CONTAINER */}
+      <div className="max-w-[1400px] mx-auto">
 
-        {/* Header */}
-        <div className="mb-8 text-center sm:text-left">
-          <h1 className="text-2xl sm:text-3xl font-bold text-green-800">
+        {/* HEADER */}
+        <div className="mb-10 text-center lg:text-left">
+          <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-emerald-800">
             Al-Qur’an Dashboard
           </h1>
-          <p className="text-gray-600 text-sm sm:text-base">
+          <p className="text-slate-600 mt-1 text-sm sm:text-base">
             Knowledge • Reflection • Guidance
           </p>
         </div>
 
-        {/* Stats Cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 mb-8">
+        {/* STATS CARDS */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-10">
           
-          <div className="bg-white p-5 rounded-2xl shadow-md text-center sm:text-left">
-            <h3 className="text-sm text-gray-500">Total Users</h3>
-            <p className="text-2xl font-bold text-green-700">2,450</p>
+          <div className="bg-white rounded-2xl p-6 shadow-sm hover:shadow-md transition">
+            <h3 className="text-sm text-slate-500">Total Users</h3>
+            <p className="text-3xl font-bold text-emerald-700 mt-2">2,450</p>
           </div>
 
-          <div className="bg-white p-5 rounded-2xl shadow-md text-center sm:text-left">
-            <h3 className="text-sm text-gray-500">Daily Recitations</h3>
-            <p className="text-2xl font-bold text-green-700">780</p>
+          <div className="bg-white rounded-2xl p-6 shadow-sm hover:shadow-md transition">
+            <h3 className="text-sm text-slate-500">Daily Recitations</h3>
+            <p className="text-3xl font-bold text-emerald-700 mt-2">780</p>
           </div>
 
-          <div className="bg-white p-5 rounded-2xl shadow-md text-center sm:text-left">
-            <h3 className="text-sm text-gray-500">Active Scholars</h3>
-            <p className="text-2xl font-bold text-green-700">45</p>
+          <div className="bg-white rounded-2xl p-6 shadow-sm hover:shadow-md transition sm:col-span-2 lg:col-span-1">
+            <h3 className="text-sm text-slate-500">Active Scholars</h3>
+            <p className="text-3xl font-bold text-emerald-700 mt-2">45</p>
           </div>
 
         </div>
 
-        {/* Charts Section */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+        {/* CHARTS */}
+        <div className="grid grid-cols-1 xl:grid-cols-2 gap-8">
           
-          {/* Weekly Users Chart */}
-          <div className="bg-white p-4 sm:p-5 rounded-2xl shadow-md">
-            <h3 className="font-semibold mb-4 text-green-800 text-center sm:text-left">
+          {/* WEEKLY USERS */}
+          <div className="bg-white rounded-2xl p-6 shadow-sm">
+            <h3 className="font-semibold text-emerald-800 mb-4 text-center lg:text-left">
               Weekly Users
             </h3>
-            <div className="w-full h-[220px] sm:h-[260px]">
+
+            <div className="w-full h-[260px] lg:h-[300px]">
               <ResponsiveContainer width="100%" height="100%">
                 <BarChart data={usersData}>
                   <XAxis dataKey="name" />
@@ -78,20 +79,21 @@ function DashboardHead() {
                   <Tooltip />
                   <Bar
                     dataKey="users"
-                    fill="#15803d"
-                    radius={[6, 6, 0, 0]}
+                    fill="#047857"
+                    radius={[8, 8, 0, 0]}
                   />
                 </BarChart>
               </ResponsiveContainer>
             </div>
           </div>
 
-          {/* Monthly Activity Chart */}
-          <div className="bg-white p-4 sm:p-5 rounded-2xl shadow-md">
-            <h3 className="font-semibold mb-4 text-green-800 text-center sm:text-left">
+          {/* MONTHLY ACTIVITY */}
+          <div className="bg-white rounded-2xl p-6 shadow-sm">
+            <h3 className="font-semibold text-emerald-800 mb-4 text-center lg:text-left">
               Monthly Activity
             </h3>
-            <div className="w-full h-[220px] sm:h-[260px]">
+
+            <div className="w-full h-[260px] lg:h-[300px]">
               <ResponsiveContainer width="100%" height="100%">
                 <LineChart data={activityData}>
                   <XAxis dataKey="name" />
